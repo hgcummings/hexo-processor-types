@@ -52,6 +52,8 @@ exports.process = function(file){
     } else {
       data.slug = createSlug(file.path);
     }
+    
+    data.path = file.params.customType + '/' + data.slug + '/';
 
     if (doc){
       return doc.replace(data);
